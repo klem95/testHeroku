@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: true}));
 app.get('/healthcheck', (req, res) => res.send('ok'));
 
 if (__DEV__) {
-    require('longjohn');
+    require('longjohn'); 
     app.use(require('morgan')('dev'));
     app.use((req, res, next) => {
         res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
